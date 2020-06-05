@@ -11,7 +11,7 @@ body, html{
   font-family: 'Roboto', sans-serif;
   font-size:16px;
   text-align: right;
-  transform: translate(4%,1000%);
+  -webkit-transform: translate(4%,1000%);
 
 }
 .pimg1,  .pimg3, .pimg4, .pimg5{
@@ -105,7 +105,7 @@ background: linear-gradient(transparent,#fff);
   position:absolute;
   right:-35%;
   width:60%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
 }
 
 .pimg2{
@@ -117,27 +117,27 @@ background: linear-gradient(transparent,#fff);
   right:67%;
   width:4%;
   top:-200%;
-  transform: translateY(30%);
+  -webkit-transform: translateY(30%);
 }
 .pimg2  .layer8,  .pimg2  .layer10, .pimg2  .layer11, .pimg2  .layer12{
   position:absolute;
   right:28%;
   width:4%;
 top:-160%;
-  transform: translateY(30%);
+  -webkit-transform: translateY(30%);
 }
 
 .pimg3 .layer13{
   position:absolute;
   right:60%;
   width:25%;
-    transform: translateY(100%);
+  -webkit-transform: translateY(100%);
 }
 .pimg3 .layer14{
   position:absolute;
   right:19%;
   width:25%;
-  transform: translateY(100%);
+  -webkit-transform: translateY(100%);
 }
 .pimg3{
   background-image:url('../img/pink.jpg');
@@ -151,12 +151,12 @@ top:-160%;
 
 @keyframes spin {
  from{
- transform: rotateY(0deg);
+ -webkit-transform: rotateY(0deg);
  moz-transform: rotateY(0deg); //Firefox
  ms-transform: rotateY(0deg); //Microsoft Browsers
  }
  to{
- transform: rotateY(360deg);
+ -webkit-transform: rotateY(360deg);
  moz-transform: rotateY(360deg); //Firefox
  ms-transform: rotateY(360deg); //Microsoft Browsers
  }
@@ -177,21 +177,21 @@ left:38%;
  -webkit-animation-timing-function: linear;
  -webkit-animation-iteration-count: infinite;
  -webkit-animation-duration: 2s;
-  transform: translateY(200%);
+  -webkit-transform: translateY(200%);
 }
 .pimg4 .layer16{
   position:absolute;
   opacity:0.75;
 width:15%;
 left:15%;
-  transform: translateY(-70%);
+  -webkit-transform: translateY(-70%);
 }
 .pimg4 .layer17{
   position:absolute;
   opacity:0.75;
 width:15%;
 left:65%;
-  transform: translateY(-70%);
+  -webkit-transform: translateY(-70%);
 }
 .section{
   text-align:center;
@@ -209,6 +209,8 @@ left:65%;
 .section-dark{
   background-color:#282e34;
   color:#ddd;
+  min-height:150px;
+  max-height:1050px;
 }
 
 .ptext{
@@ -220,7 +222,7 @@ left:65%;
   font-size:27px;
   letter-spacing:8px;
   text-transform:uppercase;
-  transform: translateY(50%);
+  -webkit-transform: translateY(50%);
 }
 
 .ptext .border{
@@ -278,31 +280,46 @@ left:65%;
   flex-wrap: wrap;
   left: 20%;
 }
+
 .artboard:hover .button {
     position:absolute;
   -webkit-transform: rotate(-75deg);
-          transform: rotate(-75deg);
+  -webkit-transform: rotate(-75deg);
 }
 .artboard:hover .button1 {
     position:absolute;
   -webkit-transform: rotate(-75deg);
-          transform: rotate(-75deg);
+    -webkit-transform: rotate(-75deg);
 }
 .button, .links {
   position:absolute;
   display: inline-block;
   width: 200px;
   height: 43px;
-  transform: translateY(310%);
   background: #fff;
 
 }
+
+.footer {
+
+  bottom: 0;
+  width: 100%;
+}
+
+.links2 a {
+  color: white;
+}
+
+.links3  a {
+color: white;
+}
+
 .button1, .links1 {
   position:absolute;
   display: inline-block;
   width: 200px;
   height: 43px;
-  transform: translateY(1150%);
+  -webkit-transform: translateY(70px);
   background: #fff;
 
 }
@@ -312,16 +329,15 @@ left:65%;
 
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-  transform: translateY(70%);
+  -webkit-transform: translateY(70%);
   color: white;
 }
 .button1 i, .button1 a, .links1 i, .links1 a  {
   position: absolute;
   left: 40%;
-    top: 30%;
-transform: translateY(600%);
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+-webkit-transform: translateY(70%);
+    -webkit-transform: translate(-20%, -20%);
+            transform: translate(-20%, -20%);
   color: white;
 }
 
@@ -336,7 +352,7 @@ transform: translateY(600%);
   -webkit-transition: 950ms cubic-bezier(0.89, 0.03, 0.06, 1.5);
   transition: 950ms cubic-bezier(0.89, 0.03, 0.06, 1.5);
   -webkit-transform-origin: top left;
-          transform-origin: top left;
+  transform-origin: top left;
 }
 
 .links, .links1 {
@@ -344,4 +360,11 @@ transform: translateY(600%);
   z-index: 9;
 background:transparent;
   color: #fff;
+
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    background-color: l#282e34;
+  }
 }
